@@ -20,7 +20,3 @@ textarea {
     height: 100px;
     margin-top: 10px;
 }
-.container {
-    flex-direction: column; /* 使子元素纵向排列 */
-    align-items: center; /* 子元素居中对齐 */
-}
