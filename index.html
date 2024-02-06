@@ -3,84 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genshin Impact Promotion</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Genshin Impact Promotion</title>
 </head>
 <body>
 
-    <header>
-        <h1>Genshin Impact Promotion</h1>
-    </header>
+    <h1>Welcome to Genshin Impact Promotion</h1>
 
-    <main>
-        <section id="promo-video">
-            <h2>游戏宣传视频</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/视频ID" frameborder="0" allowfullscreen></iframe>
-        </section>
+    <div id="characterInfo">
+        <h2>Character Information</h2>
+        <p id="characterName">No Character Selected</p>
+        <button onclick="selectCharacter()">Select Character</button>
+    </div>
 
-        <section id="events">
-            <h2>最新活动</h2>
-            <p>参与我们的最新活动，赢取丰厚奖励！</p>
-            <button onclick="showEventDetails()">查看活动详情</button>
-            <div id="event-details" style="display: none;">
-                <p>活动详情：XXXXXXXXXXXXXXX</p>
-            </div>
-        </section>
-    </main>
+    <div id="events">
+        <h2>Upcoming Events</h2>
+        <ul id="eventList">
+            <!-- Event items will be added dynamically using JavaScript -->
+        </ul>
+        <button onclick="loadEvents()">Load Events</button>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 Genshin Impact Promotion</p>
-    </footer>
+    <div id="feedback">
+        <h2>Feedback</h2>
+        <textarea id="feedbackInput" placeholder="Provide your feedback"></textarea>
+        <button onclick="submitFeedback()">Submit Feedback</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-header {
-    background-color: #3498db;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-button {
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
-footer {
-    background-color: #34495e;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-}
-function showEventDetails() {
-    var eventDetails = document.getElementById('event-details');
-    if (eventDetails.style.display === 'none') {
-        eventDetails.style.display = 'block';
-    } else {
-        eventDetails.style.display = 'none';
-    }
-}
-
