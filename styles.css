@@ -24,3 +24,9 @@ textarea {
     height: 100px;
     margin-top: 10px;
 }
+.container {
+    max-width: 800px; /* 设置网页内容的最大宽度 */
+    width: 100%; /* 确保内容在超出最大宽度后能够自动换行 */
+    padding: 20px; /* 添加一些内边距 */
+    text-align: center; /* 文字内容水平居中 */
+}
