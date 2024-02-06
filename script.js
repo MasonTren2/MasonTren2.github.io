@@ -36,3 +36,19 @@ function subscribe() {
     alert(`Subscribed with email: ${emailInput}`);
 }
 
+function playVideo() {
+    const video = document.querySelector('video');
+    video.play();
+}
+
+function pauseVideo() {
+    const video = document.querySelector('video');
+    video.pause();
+}
+
+function stopVideo() {
+    const video = document.querySelector('video');
+    video.currentTime = 0;
+    video.pause();
+}
+
