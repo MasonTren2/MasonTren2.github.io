@@ -10,7 +10,7 @@
 
     <h1>Welcome to Genshin Impact</h1>
 
-    <div id="video">
+    <div id="video" class="container">
         <h2>Game Trailer</h2>
         <video controls width="400">
         <source src="https://www.youtube.com/watch?v=zQk1QHm2-Cw" type="video/mp4">
@@ -18,13 +18,13 @@
         </video>
     </div>
 
-    <div id="characterInfo">
+    <div id="characterInfo" class="container">
         <h2>Character Information</h2>
         <p id="characterName">No Character Selected</p>
         <button onclick="selectCharacter()">Select Character</button>
     </div>
 
-    <div id="events">
+    <div id="events" class="container">
         <h2>Upcoming Events</h2>
         <ul id="eventList">
             <!-- Event items will be added dynamically using JavaScript -->
@@ -32,18 +32,18 @@
         <button onclick="loadEvents()">Load Events</button>
     </div>
 
-    <div id="feedback">
+    <div id="feedback" class="container">
         <h2>Feedback</h2>
         <textarea id="feedbackInput" placeholder="Provide your feedback"></textarea>
         <button onclick="submitFeedback()">Submit Feedback</button>
     </div>
 
-    <div id="share">
+    <div id="share" class="container">
         <h2>Share with Friends</h2>
         <button onclick="shareOnSocialMedia()">Share on Social Media</button>
     </div>
 
-    <div id="subscribe">
+    <div id="subscribe" class="container">
         <h2>Subscribe to Updates</h2>
         <input type="email" id="emailInput" placeholder="Enter your email">
         <button onclick="subscribe()">Subscribe</button>
