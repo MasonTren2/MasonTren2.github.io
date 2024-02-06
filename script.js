@@ -26,3 +26,13 @@ function submitFeedback() {
     const feedbackInput = document.getElementById('feedbackInput').value;
     alert(`Feedback submitted: ${feedbackInput}`);
 }
+
+function shareOnSocialMedia() {
+    alert('Shared on Social Media!');
+}
+
+function subscribe() {
+    const emailInput = document.getElementById('emailInput').value;
+    alert(`Subscribed with email: ${emailInput}`);
+}
+
