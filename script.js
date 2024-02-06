@@ -33,7 +33,15 @@ function shareOnSocialMedia() {
 
 function subscribe() {
     const emailInput = document.getElementById('emailInput').value;
-    alert(`Subscribed with email: ${emailInput}`);
+    const errorText = document.getElementById('errorText');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailRegex.test(emailInput)) {
+        alert(`Subscribed with email: ${emailInput}`);
+        errorText.innerText = '';
+    } else {
+        errorText.innerText = 'Invalid email format';
+    }
 }
 
 function playVideo() {
@@ -50,20 +58,5 @@ function stopVideo() {
     const video = document.querySelector('video');
     video.currentTime = 0;
     video.pause();
-}
-
-function subscribe() {
-    const emailInput = document.getElementById('emailInput').value;
-    const errorText = document.getElementById('errorText');
-
-    // 使用正则表达式检验邮件格式
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (emailRegex.test(emailInput)) {
-        alert(`Subscribed with email: ${emailInput}`);
-        errorText.innerText = ''; // 清除错误信息
-    } else {
-        errorText.innerText = 'Invalid email format';
-    }
 }
 
