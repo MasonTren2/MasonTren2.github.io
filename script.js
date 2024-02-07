@@ -24,7 +24,16 @@ function loadEvents() {
 
 function submitFeedback() {
     const feedbackInput = document.getElementById('feedbackInput').value;
-    alert(`Feedback submitted: ${feedbackInput}`);
+    if (feedbackInput.trim() !== '') {
+        alert(`Feedback submitted: ${feedbackInput}`);
+    } else {
+        alert('Please provide feedback before submitting.');
+    }
+}
+
+function cancelFeedback() {
+    document.getElementById('feedbackInput').value = '';
+    alert('Feedback submission canceled.');
 }
 
 function shareOnSocialMedia() {
