@@ -22,18 +22,20 @@ function loadEvents() {
     });
 }
 
-function submitFeedback() {
+function showFeedbackDialog() {
     const feedbackInput = document.getElementById('feedbackInput').value;
+    
     if (feedbackInput.trim() !== '') {
-        alert(`Feedback submitted: ${feedbackInput}`);
+        const confirmation = confirm(`Do you want to submit the following feedback?\n\n${feedbackInput}`);
+
+        if (confirmation) {
+            alert('Feedback submitted successfully!');
+        } else {
+            alert('Feedback submission canceled.');
+        }
     } else {
         alert('Please provide feedback before submitting.');
     }
-}
-
-function cancelFeedback() {
-    document.getElementById('feedbackInput').value = '';
-    alert('Feedback submission canceled.');
 }
 
 function shareOnSocialMedia() {
