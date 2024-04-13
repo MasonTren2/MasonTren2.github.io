@@ -7,46 +7,78 @@
     <title>Genshin Impact Promotion</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#video">Game Trailer</a></li>
+                <li><a href="#characterInfo">Character Information</a></li>
+                <li><a href="#events">Upcoming Events</a></li>
+                <li><a href="#downloadSection">Download</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>Welcome to Genshin Impact</h1>
+    <main>
+        <h1 class="centered-title">Welcome to Genshin Impact</h1>
 
-    <div id="video" class="container">
-        <h2>Game Trailer</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/zQk1QHm2-Cw?si=1OtOrC7tiOYIqQuc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
+        <section id="video" class="container">
+            <h2>Game Trailer</h2>
+            <iframe src="https://www.youtube.com/embed/P6xGgOI3GWY?si=jzdUiuNZpbs7qmyx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
 
-    <div id="characterInfo" class="container">
-        <h2>Character Information</h2>
-        <p id="characterName">No Character Selected</p>
-        <button onclick="selectCharacter()">Select Character</button>
-    </div>
+        <section id="characterInfo" class="container">
+            <h2>Character Information</h2>
+            <div id="characterSearch">
+                <input type="text" id="searchInput" placeholder="Search character...">
+                <button onclick="searchCharacter()">Search</button>
+            </div>
+            <div id="characterImageContainer">
+                <img id="characterImage" src="" alt="Character Image">
+                <p id="characterName">Character Name</p>
+            </div>
+            <div id="characterControls">
+                <button onclick="selectPreviousCharacter()">&lt; Previous</button>
+                <button onclick="selectNextCharacter()">Next &gt;</button>
+            </div>
+        </section>
 
-    <div id="events" class="container">
-        <h2>Upcoming Events</h2>
-        <ul id="eventList">
-            <!-- Event items will be added dynamically using JavaScript -->
-        </ul>
-        <button onclick="loadEvents()">Load Events</button>
-    </div>
+        <section id="events" class="container">
+            <h2>Upcoming Events</h2>
+            <ul id="eventList">
+                <!-- Event items will be added dynamically using JavaScript -->
+            </ul>
+            <button onclick="loadEvents()">Load Events</button>
+        </section>
 
-    <div id="feedback" class="container">
-        <h2>Feedback</h2>
-        <textarea id="feedbackInput" placeholder="Provide your feedback"></textarea>
-        <button onclick="showFeedbackDialog()">Submit Feedback</button>
-    </div>
+        <section id="downloadSection" class="container">
+            <h2>Download Genshin Impact</h2>
+            <img id="downloadQR" src="images/download.png" alt="Download QR Code" style="display:none; cursor:pointer; max-width:200px;" onclick="hideQRCode()">
+            <button onclick="showQRCode()">Download Genshin Impact</button>
+        </section>
 
-    <div id="share" class="container">
-        <h2>Share with Friends</h2>
-        <button onclick="shareOnSocialMedia()">Share on Social Media</button>
-    </div>
+        <section id="feedback" class="container">
+            <h2>Feedback</h2>
+            <textarea id="feedbackInput" placeholder="Provide your feedback"></textarea>
+            <button onclick="showFeedbackDialog()">Submit Feedback</button>
+        </section>
 
-    <div id="subscribe" class="container">
-        <h2>Subscribe to Updates</h2>
-        <input type="email" id="emailInput" placeholder="Enter your email">
-        <p id="errorText" style="color: red;"></p>
-        <button onclick="subscribe()">Subscribe</button>
-    </div>
+        <section id="subscribe" class="container">
+            <h2>Subscribe to Updates</h2>
+            <input type="email" id="emailInput" placeholder="Enter your email">
+            <p id="errorText" style="color: red;"></p>
+            <button onclick="subscribe()">Subscribe</button>
+        </section>
+    </main>
 
     <script src="script.js"></script>
+
+    <div id="downloadPopup" class="popup">
+    	<div class="popup-content">
+        	<p>Click the download button to download the file.</p>
+        	<button id="gotItButton">Got it</button>
+    	</div>
+     </div>
 </body>
 </html>
